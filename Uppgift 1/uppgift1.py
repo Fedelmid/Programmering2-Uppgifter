@@ -1,10 +1,4 @@
 #!/usr/bin/python -tt
-#
-# Uppgift 1
-# ---------
-#
-# Fyll i funktionerna nedan med din egen kod för att lösa varje givet problem.
-#
 
 ####
 # Textsträngar
@@ -14,14 +8,21 @@
 # variabeln "count". Om antalet är 10 eller fler så ska textsträngen "Apan har
 # många bananer" returneras istället.
 def bananas(count):
-    # skriv din egen kod här
+    if count < 10:
+        print('Apan har ', count, ' bananer')
+    else:
+        print('Apan har många bananer')
     return
+
 
 # Given en textsträng, skriv en funktion returnerar de två första och två sista
 # tecknen i ursprungssträngen. Om strängen är kortare än 2 tecken returnera istället
 # en tom sträng.
 def both_ends(s):
-    # skriv din kod här
+    if len(s) > 2:
+        print(s[0], s[1], s[-2], s[-1])
+    else:
+        print('')
     return
 
 ####
@@ -29,7 +30,12 @@ def both_ends(s):
 
 # Given en lista med strängar, returnera antalet strängar som är längre än 2 tecken.
 def match_lengths(words):
-    # skriv din kod här
+    strAn = 0
+    for i in range(len(words)):
+        if len(words[i]) > 2:
+            strAn = strAn + 1
+    print(strAn)
+
     return
 
 ####
