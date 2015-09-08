@@ -9,10 +9,9 @@
 # många bananer" returneras istället.
 def bananas(count):
     if count < 10:
-        print('Apan har ', count, ' bananer')
+        return('Apan har '+str(count)+' bananer')
     else:
-        print('Apan har många bananer')
-    return
+        return('Apan har många bananer')
 
 
 # Given en textsträng, skriv en funktion returnerar de två första och två sista
@@ -20,10 +19,10 @@ def bananas(count):
 # en tom sträng.
 def both_ends(s):
     if len(s) > 2:
-        print(s[0], s[1], s[-2], s[-1])
+        return(s[0] + s[1] + s[-2] + s[-1])
     else:
-        print('')
-    return
+        return('')
+
 
 ####
 # Listor
@@ -34,9 +33,7 @@ def match_lengths(words):
     for i in range(len(words)):
         if len(words[i]) > 2:
             strAn = strAn + 1
-    print(strAn)
-
-    return
+    return strAn
 
 ####
 # Följande kod används för att testa dina lösningar för att se
@@ -47,7 +44,7 @@ def test(got, expected):
         prefix = ' OK '
     else:
         prefix = '  X '
-    print(%s got: %s expected: %s' % (prefix, repr(got), repr(expected)))
+    print('%s got: %s expected: %s' % (prefix, repr(got), repr(expected)))
 
 def main():
     print("bananas")
